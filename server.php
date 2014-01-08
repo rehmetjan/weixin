@@ -55,10 +55,10 @@
      */
     protected function onText() {
       
-      //$this->responseText('' . $this->getRequest('content'));
-      $mytext = $this->getRequest('content')
-      
-      $this->responseText($mytext);
+      $this->responseText('' . $this->getRequest('content'));
+      //$mytext = $this->getRequest('content')
+
+      //$this->responseText($mytext);
     }
 
     /**
