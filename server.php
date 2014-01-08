@@ -53,14 +53,31 @@
      *
      * @return void
      */
+
+    
+
     protected function onText() {
       
-      $this->responseText('' . $this->getRequest('content'));
+      $persian = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
+      $num = range(0, 9);
+      $string = $this->getRequest('content')
+      $replaced = str_replace($persian, $num, $string);
+
+      $this->responseText('' . $replaced);
       //$mytext = $this->getRequest('content')
 
       //$this->responseText($mytext);
+
+
     }
 
+    function convert($string) {
+    
+        $persian = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
+        $num = range(0, 9);
+        
+        return str_replace($persian, $num, $string);
+    }
     /**
      * 收到图片消息时触发，回复由收到的图片组成的图文消息
      *
