@@ -54,7 +54,11 @@
      * @return void
      */
     protected function onText() {
-      $this->responseText('' . $this->getRequest('content'));
+      
+      //$this->responseText('' . $this->getRequest('content'));
+      $mytext = $this->getRequest('content')
+      
+      $this->responseText($mytext);
     }
 
     /**
