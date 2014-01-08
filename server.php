@@ -58,17 +58,10 @@
 
     protected function onText() {
       
-      $persian = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
-      $num = range(0, 9);
-      $string = $this->getRequest('content')
-      $replaced = str_replace($persian, $num, $string);
-
-      $this->responseText('' . $replaced);
+      $this->responseText('' . $this->getRequest('content'));
       //$mytext = $this->getRequest('content')
 
       //$this->responseText($mytext);
-
-
     }
 
     function convert($string) {
