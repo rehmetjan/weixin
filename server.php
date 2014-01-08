@@ -5,7 +5,7 @@
  * @author NetPuter <netputer@gmail.com>
  */
 
-  require __DIR__('/Wechat.php');
+  require __DIR__ . '/Wechat.php';
 
   /**
    * 微信公众平台演示类
@@ -18,7 +18,7 @@
      * @return void
      */
     protected function onSubscribe() {
-      $this->responseText('欢迎关注');
+      $this->responseText('yahshimusiz! Applik saloni sizni qarshi alidu!');
     }
 
     /**
@@ -27,7 +27,7 @@
      * @return void
      */
     protected function onScan() {
-      $this->responseText('二维码的EventKey：' . $this->getRequest('EventKey'));
+      $this->responseText('QR EventKey：' . $this->getRequest('EventKey'));
     }
 
     /**
@@ -45,7 +45,7 @@
      * @return void
      */
     protected function onEventLocation() {
-      $this->responseText('收到了位置推送：' . $this->getRequest('Latitude') . ',' . $this->getRequest('Longitude'));
+      $this->responseText('Orningiz: ' . $this->getRequest('Latitude') . ',' . $this->getRequest('Longitude'));
     }
 
     /**
@@ -54,7 +54,7 @@
      * @return void
      */
     protected function onText() {
-      $this->responseText('收到了文字消息：' . $this->getRequest('content'));
+      $this->responseText('' . $this->getRequest('content'));
     }
 
     /**
@@ -77,10 +77,10 @@
      * @return void
      */
     protected function onLocation() {
-      $num = 1 / 0;
+      //$num = 1 / 0;
       // 故意触发错误，用于演示调试功能
 
-      $this->responseText('收到了位置消息：' . $this->getRequest('location_x') . ',' . $this->getRequest('location_y'));
+      $this->responseText('' . $this->getRequest('location_x') . ',' . $this->getRequest('location_y'));
     }
 
     /**
@@ -89,7 +89,7 @@
      * @return void
      */
     protected function onLink() {
-      $this->responseText('收到了链接：' . $this->getRequest('url'));
+      $this->responseText('Link:' . $this->getRequest('url'));
     }
 
     /**
@@ -98,7 +98,7 @@
      * @return void
      */
     protected function onVoice() {
-      $this->responseText('收到了语音消息,识别结果为：' . $this->getRequest('Recognition'));
+      $this->responseText('' . $this->getRequest('Recognition'));
     }
 
     /**
@@ -107,7 +107,7 @@
      * @return void
      */
     protected function onClick() {
-      $this->responseText('你点击了菜单：' . $this->getRequest('EventKey'));
+      $this->responseText('key:' . $this->getRequest('EventKey'));
     }
 
     /**
