@@ -5,7 +5,7 @@
  * @author NetPuter <netputer@gmail.com>
  */
 
-  require('../src/Wechat.php');
+  require __DIR__('/Wechat.php');
 
   /**
    * 微信公众平台演示类
