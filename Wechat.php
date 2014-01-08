@@ -2,7 +2,7 @@
 /**
  * 微信公众平台 PHP SDK
  *
- * @author NetPuter <netputer@gmail.com>
+ * @author Rehmetjan Tursun <rehmetjan.tursun@gmail.com>
  */
 
   /**

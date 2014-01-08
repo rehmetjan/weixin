@@ -2,7 +2,7 @@
 /**
  * 微信公众平台 PHP SDK 示例文件
  *
- * @author NetPuter <netputer@gmail.com>
+ * @author Rehmetjan Tursun <rehmetjan.tursun@gmail.com>
  */
 
   require __DIR__ . '/Wechat.php';
