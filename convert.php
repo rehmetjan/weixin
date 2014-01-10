@@ -1,12 +1,5 @@
 <?php
-/************
- *ULY to UEY convertor
- *2014.1
- *Rehmetjan Tursun
- *************/
-
-class ULY2UEY{
-	function convert($string) {
+function convert($string) {
     
         $latin = array('ng',        //1
                        'Gh','gh',   //2
@@ -82,8 +75,4 @@ class ULY2UEY{
         $new_str = implode(' ', $words);
         return str_replace($latin, $uyghurche, $new_str);
     }
-}
-//$strobj = new ULY2UEY();
-//echo $strobj->convert('emdi bu yerge bir sinaq qilip baqili.. eger men bir xetni yaxshi yazsam jungxuadek');
-
-?> 
+?>

@@ -37,12 +37,12 @@ function getEreb(){
 	replace(/Ö/g, 'ئۆ').replace(/ö/g, 'ۆ').
 	replace(/Ü/g, 'ئۈ').replace(/ü/g, 'ۈ').
 	replace(/W/g, 'ۋ').replace(/w/g, 'ۋ').
-	replace(/É/g, 'ئې').replace(/é/g, 'ې').
+	replace(/Ë/g, 'ئې').replace(/ë/g, 'ې').
 	replace(/I/g, 'ئى').replace(/i/g, 'ى').
 	replace(/Y/g, 'ي').replace(/y/g, 'ي').
 	replace(/'?'/g, '؟').replace(/','/g, '،'); //
 	//replace(/;/g, '؛').replace(/;/g, '؛'). //
-	//replace(/,/g, '،').replace(/,/g, '،');	//
+	//replace(/','/g, '،').replace(/','/g, '،');	//
 
 	document.getElementById('eltext_out').innerHTML = elOut;
 	document.getElementById('etext_out').innerHTML = eOut;

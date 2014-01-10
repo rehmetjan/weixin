@@ -1,0 +1,11 @@
+
+
+def 
+
+
+def todaysnews():
+	TodaysNews = News.objects.filter(last 6 news, flag=true, count=6)
+
+	returnObj = Json(TodaysNews)
+
+	return returnObj

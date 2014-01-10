@@ -2,10 +2,10 @@
 /**
  * 微信公众平台 PHP SDK 示例文件
  *
- * @author Rehmetjan Tursun <rehmetjan.tursun@gmail.com>
+ * @author NetPuter <netputer@gmail.com>
  */
 
-  require __DIR__ . '/Wechat.php';
+  require('../src/Wechat.php');
 
   /**
    * 微信公众平台演示类
@@ -18,7 +18,7 @@
      * @return void
      */
     protected function onSubscribe() {
-      $this->responseText('yahshimusiz! Applik saloni sizni qarshi alidu!');
+      $this->responseText('欢迎关注');
     }
 
     /**
@@ -27,7 +27,7 @@
      * @return void
      */
     protected function onScan() {
-      $this->responseText('QR EventKey：' . $this->getRequest('EventKey'));
+      $this->responseText('二维码的EventKey：' . $this->getRequest('EventKey'));
     }
 
     /**
@@ -45,7 +45,7 @@
      * @return void
      */
     protected function onEventLocation() {
-      $this->responseText('Orningiz: ' . $this->getRequest('Latitude') . ',' . $this->getRequest('Longitude'));
+      $this->responseText('收到了位置推送：' . $this->getRequest('Latitude') . ',' . $this->getRequest('Longitude'));
     }
 
     /**
@@ -53,24 +53,10 @@
      *
      * @return void
      */
-
-    
-
     protected function onText() {
-      include('convert.php');
-      $this->responseText(convert($this->getRequest('content')));
-      //$mytext = $this->getRequest('content')
-
-      //$this->responseText($mytext);
+      $this->responseText('收到了文字消息：' . $this->getRequest('content'));
     }
 
-    function convert($string) {
-    
-        $persian = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
-        $num = range(0, 9);
-        
-        return str_replace($persian, $num, $string);
-    }
     /**
      * 收到图片消息时触发，回复由收到的图片组成的图文消息
      *
@@ -91,10 +77,10 @@
      * @return void
      */
     protected function onLocation() {
-      //$num = 1 / 0;
+      $num = 1 / 0;
       // 故意触发错误，用于演示调试功能
 
-      $this->responseText('' . $this->getRequest('location_x') . ',' . $this->getRequest('location_y'));
+      $this->responseText('收到了位置消息：' . $this->getRequest('location_x') . ',' . $this->getRequest('location_y'));
     }
 
     /**
@@ -103,7 +89,7 @@
      * @return void
      */
     protected function onLink() {
-      $this->responseText('Link:' . $this->getRequest('url'));
+      $this->responseText('收到了链接：' . $this->getRequest('url'));
     }
 
     /**
@@ -112,7 +98,7 @@
      * @return void
      */
     protected function onVoice() {
-      $this->responseText('' . $this->getRequest('Recognition'));
+      $this->responseText('收到了语音消息,识别结果为：' . $this->getRequest('Recognition'));
     }
 
     /**
@@ -121,7 +107,7 @@
      * @return void
      */
     protected function onClick() {
-      $this->responseText('key:' . $this->getRequest('EventKey'));
+      $this->responseText('你点击了菜单：' . $this->getRequest('EventKey'));
     }
 
     /**
