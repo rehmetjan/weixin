@@ -38,6 +38,9 @@ function convert($string) {
                        ',','.',     //extra 3
                        '?',';',     //extra 4
                        '!','.',     //extra 5
+                       'C','c',     //extra 6
+                       'V','v',     //extra 7
+                       
         			   );
         
         $uyghurche = array('ڭ', "ئا","ئە","ئې","ئې","ئى","ئو","ئۇ","ئۆۆ","ئۈ",      //1
@@ -77,6 +80,8 @@ function convert($string) {
                            '،','.',     //extra 3
                            '؟','؛',     //extra 4
                            '!','.',     //extra 5
+                           'چ','چ',     //extra 6
+                           'ئۈ','ۈ',     //extra 7
         				);
         $words = mb_convert_case($string,MB_CASE_TITLE,'utf-8');
 
