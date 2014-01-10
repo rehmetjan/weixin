@@ -33,6 +33,11 @@ function convert($string) {
                        'Ë','ë',     //30
                        'I','i',     //31
                        'Y','y',     //32
+                       'É','é',     //extra 1
+                       'Ä','ä',     //extra 2
+                       ',','.',     //extra 3
+                       '?',';',     //extra 4
+                       '!','.',     //extra 5
         			   );
         
         $uyghurche = array('ڭ',        //1
@@ -67,6 +72,11 @@ function convert($string) {
                            'ئې','ې',     //30
                            'ئى','ى',     //31
                            'ي','ي',     //32
+                           'ئې','ې',     //extra 1
+                           'ئە','ە',     //extra 2
+                           '،','.',     //extra 3
+                           '؟','؛',     //extra 4
+                           '!','.',     //extra 5
         				);
 
         $words = explode(' ', $string);
