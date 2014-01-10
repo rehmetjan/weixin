@@ -1,7 +1,7 @@
 <?php
 function convert($string) {
     
-        $latin = array('ng', "'"       //1
+        $latin = array('ng', "'",       //1
                        'Gh','gh',   //2
                        'Ch','ch',   //3
                        'Sh','sh',   //4
