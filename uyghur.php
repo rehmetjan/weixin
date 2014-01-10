@@ -8,7 +8,7 @@
 class ULY2UEY{
 	function convert($string) {
     
-        $latin = array('ng',        //1
+        $latin = array('ng', "'",        //1
                        'Gh','gh',   //2
                        'Ch','ch',   //3
                        'Sh','sh',   //4
@@ -42,7 +42,7 @@ class ULY2UEY{
                        'Y','y',     //32
         			   );
         
-        $uyghurche = array('ڭ',        //1
+        $uyghurche = array('ڭ',"ئ‍",        //1
                            'غ','غ',     //2
                            'چ','چ',     //3
                            'ش','ش',     //4
@@ -90,6 +90,6 @@ class ULY2UEY{
 
 
 $strobj = new ULY2UEY();
-echo $strobj->convert('teiliq');
+echo $strobj->convert("te'liq, we sa'et, shu'ar");
 
 ?> 
