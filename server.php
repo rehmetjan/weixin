@@ -57,7 +57,7 @@
     
 
     protected function onText() {
-      include('convert.php');
+      include('./convert.php');
       $this->responseText(convert($this->getRequest('content')));
       
     }

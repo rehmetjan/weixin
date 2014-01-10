@@ -40,7 +40,7 @@ function convert($string) {
                        '!','.',     //extra 5
         			   );
         
-        $uyghurche = array('ڭ', "ئا","ئە","ئې","ئې","ئى","ئو","ئۇ","ئۆ","ئۈ",      //1
+        $uyghurche = array('ڭ', "ئا","ئە","ئې","ئې","ئى","ئو","ئۇ","ئۆۆ","ئۈ",      //1
                            'غ','غ',     //2
                            'چ','چ',     //3
                            'ش','ش',     //4
@@ -78,13 +78,8 @@ function convert($string) {
                            '؟','؛',     //extra 4
                            '!','.',     //extra 5
         				);
-
-        // $txt='ti si želva (čestitke)';
-        // echo mb_convert_case($txt,MB_CASE_TITLE,'utf-8');
-        //$words = explode(' ', $string);
-        //$words = array_map('ucfirst', $words);
         $words = mb_convert_case($string,MB_CASE_TITLE,'utf-8');
-        //$new_str = implode(' ', $words);
+
         return str_replace($latin, $uyghurche, $words);
     }
 ?>
