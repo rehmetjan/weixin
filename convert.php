@@ -1,7 +1,7 @@
 <?php
 function convert($string) {
     
-        $latin = array('ng', "'",       //1
+        $latin = array('ng', "'a","'e","'ë","'é","'i","'o","'u","'ö","'ü",       //1
                        'Gh','gh',   //2
                        'Ch','ch',   //3
                        'Sh','sh',   //4
@@ -40,7 +40,7 @@ function convert($string) {
                        '!','.',     //extra 5
         			   );
         
-        $uyghurche = array('ڭ', "ئ‍",       //1
+        $uyghurche = array('ڭ', "ئا","ئە","ئې","ئې","ئى","ئو","ئۇ","ئۆ","ئۈ",      //1
                            'غ','غ',     //2
                            'چ','چ',     //3
                            'ش','ش',     //4
